@@ -85,7 +85,7 @@ img {
 }
 
 #pressMe {
-    border-radius: 5%;
+    border-radius: 5px;
     gap: 10px;
     padding: 5px;
     color: white;
