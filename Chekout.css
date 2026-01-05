@@ -282,8 +282,6 @@ new {
     }
 }
 
-.container {}
-
 .new > .card {
     position: relative;
 }
