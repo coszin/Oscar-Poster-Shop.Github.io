@@ -15,9 +15,41 @@ body {
 
 header { 
     background-color: #4FDD80;
-    grid-column: auto / span 6;
+    grid-column: auto / span 5;
     grid-row: auto / span 1;
 }
+
+footer {
+    display: inline-grid;
+    background-color: #4FDD80;
+    grid-column: auto / span 5;
+    
+    justify-items: center;
+    align-items: top;
+    font-size: 90px;
+}
+
+main {
+    display: inline-grid;
+    background-color: #4FDD80;
+    grid-column: auto / span 5;
+    grid-row: auto / span 1;
+
+    align-items: end;
+    justify-content: center;
+}
+
+
+/* #colorGreen {
+    background-color: #4FDD80;
+} */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Buttons --> */
 
 #clickme {
     margin-top: 25px;
@@ -27,21 +59,72 @@ header {
     cursor: pointer;
 }
 
-main {
-    display: inline-grid;
-    background-color: #4FDD80;
-    grid-column: auto / span 5;
-    grid-row: auto / span 1;
-    align-items: end;
-    justify-content: center;
+#pressMe {
+    border-radius: 5px;
+    gap: 10px;
+    padding: 8px;
+    color: white;
+    background-color: red;
+    border: none;
 }
 
-footer {
-    display: inline-grid;
-    background-color: #4FDD80;
-    grid-column: auto / span 6;
+/* <-- buttons */
 
-    justify-items: center;
-    align-items: top;
-    font-size: 90px;
+#text {
+    color: white;
+}
+
+bottomBar {
+    display: inline-grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+
+    background-color:rgb(39, 39, 39);
+
+    grid-column: auto / span 5;
+    grid-row: auto / span 2; 
+}
+
+/* below are good */
+
+.bottomBar {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(39, 39, 39);
+    /* gap: 5px; */
+    justify-content: center;
+
+    h2 {
+     align-self: top;
+    }
+}
+
+.bottomBarImg {
+    display: flex;
+    flex-direction: row;
+}
+
+bar {
+    gap: 5px;
+}
+
+/* above are good */
+
+#Checkout {
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+
+    background-color: black;
+    padding-top: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    gap: 25px;
+    
+    grid-column: auto / span 5;
+    grid-row: auto / span 4; 
 }
