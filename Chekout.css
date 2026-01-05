@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 175px);
+}
+
+header { 
+    background-color: #4FDD80;
+    grid-column: auto / span 6;
+    grid-row: auto / span 1;
+}
+
+#clickme {
+    margin-top: 25px;
+    margin-left: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    display: inline-grid;
+    background-color: #4FDD80;
+    grid-column: auto / span 5;
+    grid-row: auto / span 1;
+    align-items: end;
+    justify-content: center;
+}
+
+footer {
+    display: inline-grid;
+    background-color: #4FDD80;
+    grid-column: auto / span 6;
+
+    justify-items: center;
+    align-items: top;
+    font-size: 90px;
+}
