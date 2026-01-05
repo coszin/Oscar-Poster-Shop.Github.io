@@ -3,51 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Poster-shop.css">
+    <link rel="stylesheet" href="Chekout.css">
     <title>Document</title>
 </head>
 <body>
     <header>
-        <a href="http://127.0.0.1:5500/Poster-shop.html">
+        <a href="http://127.0.0.1:5500/Poster-Shop.html">
             <button id="clickme">
                 <img src="images_files/navicon.svg" alt="">
             </button>
         </a>
     </header>
-    <footer><strong>Poster Shop</strong></footer>
+    <footer><strong>Checkout</strong></footer>
     <main><img src="images_files/ninjahead.svg" alt=""></main>
-    
-    <aside id="Checkout">
-        <div>
-            <img src="images_files/char-7.png" alt="">
-        </div>
-        <div>
-            <img src="images_files/char-9.png" alt="">
-        </div>
+        <!-- ------------------------------------------------------------------------------ -->
+
+    <aside>
+        <h2 class="text" id="text"><strong>Varor i korg</strong></h2>
     </aside>
+        
+
+        <!-- ------------------------------------------------------------------------------ -->
+        <large>
+            <temp>
+                <img src="images_files/char-7.png" alt="">
+                <temp id="textWithBackgroundColor">
+                    <h2 class="title">Fotograf</h2>
+                    <button class="redButton" id="pressMe">ta bort från varukorg</button>
+                </temp>
+            </temp>
+            <temp>
+                <img src="images_files/char-9.png" alt="">
+                <temp id="textWithBackgroundColor">
+                        <h2 class="title">Personlig tränare</h2>
+                        <button id="pressMe">ta bort från varukorg</button>
+                </temp>
+            </temp>
+        </large>
+    <!-- ------------------------------------------------------------------------------ -->
+
+    <new>
+        <p class="litenFont1">Vara</p>
+        <p class="litenFont2">Antal</p>
+        <p class="litenFont3">Pris</p>
+        <p class="topLeft">Poster Fotograf</p>
+        <p class="topMiddle">1</p>
+        <p class="topRight">179 sek</p>
+        <p class="middleRight">Poster Crossfit</p>
+        <p class="middle">1</p>
+        <p class="middleLeft">179 sek</p>
+        <p class="bottomLeft">total</p>
+        <p class="bottomRight">358 sek</p>
+    </new>
+    <!-- ------------------------------------------------------------------------------ -->
     <bottomBar>
         <bar class="bottomBar" id="text">
-                <h2>Nav</h2>
-                <p>Products</p>
-                <p>About Us</p>
-                <p>Contact</p>
+                <h2 class="title">Nav</h2>
+                <p class="text">Products</p>
+                <p class="text">About Us</p>
+                <p class="text">Contact</p>
         </bar>
         
         <bar class="bottomBar" id="text">
-            <h2>Address</h2>
-            <p>Plinkeplonkvägen 32</p>
-            <p>888 81 Klokberga</p>
+            <h2 class="title">Address</h2>
+            <p class="text">Plinkeplonkvägen 32</p>
+            <p class="text">888 81 Klokberga</p>
         </bar>
         
-        <div class="bottomBar" id="text">
-            <h2 id="text">Social media</h2>
+        <bar class="bottomBar" id="text">
+            <h2 class="title">Social media</h2>
             <bar class="bottomBarImg">
                 <img src="images_files/logo-twitter.svg" alt="">
                 <img src="images_files/logo-facebook.svg" alt="">
                 <img src="images_files/logo-linkedin.svg" alt="">
                 <img src="images_files/logo-instagram.svg" alt="">
             </bar>
-        </div>
+        </bar>
     </bottomBar>
 </body>
 </html>

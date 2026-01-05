@@ -91,39 +91,6 @@ img {
 
 /* <-- button */
 
-bottomBar {
-    display: inline-grid;
-    
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    
-    background-color:rgb(39, 39, 39);
-    
-    grid-column: auto / span 5;
-    grid-row: auto / span 1; 
-}
-
-.bottomBar {
-    padding: 50px;
-    display: flex;
-    flex-direction: row;
-    background-color:rgb(39, 39, 39);
-    /* gap: 5px; */
-    justify-content: center;
-    
-    h2 {
-        align-self: top;
-    }
-}
-
-.bottomBarImg {
-    display: flex;
-    flex-direction: row;
-}
-
-bar {
-    gap: 5px;
-}
 
 /* text */
 
@@ -154,6 +121,64 @@ large {
 }
 
 temp {
+    display: inline-grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, 1fr);
     padding: 10px;
-    border: white;
+    
+    .title {
+        padding-top: 10px;
+        justify-self: start;
+    }
+    
+    .text {
+        padding-top: 25px;
+        padding-bottom: 50px;
+        justify-self: start;
+    }
+    
+    .redButton {
+        align-self: start;
+    }
+}
+
+bottomBar {
+    display: inline-grid;
+    
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    
+    background-color:rgb(39, 39, 39);
+    
+    grid-column: auto / span 5;
+    grid-row: auto / span 1; 
+}
+
+.bottomBar {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(39, 39, 39);
+    justify-content: center;
+    
+    .title {
+        padding: 10px;
+    }
+
+    .text {
+        justify-content: center;
+    }
+}
+
+.bottomBarImg {
+    display: flex;
+    flex-direction: row;
+}
+
+bar {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    justify-self: center;
 }

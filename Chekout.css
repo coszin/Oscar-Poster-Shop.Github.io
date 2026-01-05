@@ -5,24 +5,29 @@
 }
 
 body {
-    width: 100vw;
+    width: 2fr;
     padding: 1rem;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 175px);
+    grid-template-rows: repeat(auto, auto);
 }
 
+
 header { 
+    display: inline-grid;
     background-color: #4FDD80;
-    grid-column: auto / span 5;
-    grid-row: auto / span 1;
+    grid-column: 1 / span 5;
+    grid-row: 1 / span 1;
+    grid-template-rows: 175px;
 }
 
 footer {
     display: inline-grid;
     background-color: #4FDD80;
     grid-column: auto / span 5;
+    grid-row: 2 / 3;
+    grid-template-rows: 175px;
     
     justify-items: center;
     align-items: top;
@@ -31,33 +36,47 @@ footer {
 
 main {
     display: inline-grid;
+    grid-template-rows: 175px;
     background-color: #4FDD80;
-    grid-column: auto / span 5;
-    grid-row: auto / span 1;
-
+    grid-column: 1 / span 5;
+    grid-row: 3 / span 1;
+    
     align-items: end;
     justify-content: center;
 }
 
+aside {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: black;
+    /* gap: 25px; */
+    
+    grid-column: 1 / span 5;
+    grid-row: 4 / span 1;
 
-/* #colorGreen {
-    background-color: #4FDD80;
-} */
+    .text {
+        padding: 15px;
+        justify-self: center;
+        grid-column: 1;
+        grid-row: 2;
+
+    }
+}
+
+div {
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 20px;
+}
 
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Buttons --> */
-
-#clickme {
-    margin-top: 25px;
-    margin-left: 25px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
+/* button --> */
 
 #pressMe {
     border-radius: 5px;
@@ -68,36 +87,92 @@ img {
     border: none;
 }
 
-/* <-- buttons */
+#clickme {
+    margin-top: 25px;
+    margin-left: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* <-- button */
+
+
+/* text */
 
 #text {
     color: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+#textWithBackgroundColor {
+    background-color: white;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+
+/* text */
+
+large {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    
+    background-color: black;
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 100px;
+    
+    grid-column: 1 / span 5;
+    grid-row: 5 / span 2;
+}
+
+temp {
+    display: inline-grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, 1fr);
+    padding: 10px;
+    
+    .title {
+        padding-top: 10px;
+        justify-self: start;
+    }
+    
+    .text {
+        padding-top: 25px;
+        padding-bottom: 50px;
+        justify-self: start;
+    }
+    
+    .redButton {
+        align-self: start;
+    }
 }
 
 bottomBar {
     display: inline-grid;
-
+    
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
-
+    
     background-color:rgb(39, 39, 39);
-
+    
     grid-column: auto / span 5;
-    grid-row: auto / span 2; 
+    grid-row: auto / span 1; 
 }
 
-/* below are good */
-
 .bottomBar {
-    padding: 100px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     background-color:rgb(39, 39, 39);
-    /* gap: 5px; */
     justify-content: center;
+    
+    .title {
+        padding: 10px;
+    }
 
-    h2 {
-     align-self: top;
+    .text {
+        justify-content: center;
     }
 }
 
@@ -107,24 +182,116 @@ bottomBar {
 }
 
 bar {
-    gap: 5px;
+    display: inline-grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+    justify-self: center;
 }
 
-/* above are good */
-
-#Checkout {
-    display: flex;
-    flex-direction: row;
-    /* grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr); */
+new {
+    display: inline-grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
 
     background-color: black;
-    padding-top: 100px;
-    padding-left: 100px;
-    padding-right: 100px;
-    padding-bottom: 100px;
-    gap: 25px;
-    
-    grid-column: auto / span 5;
-    grid-row: auto / span 4; 
+    grid-column: 1 / span 5;
+    grid-row: 6 / span 1;
+
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    padding: 50px;
+
+    align-items: stretch;
+
+    .litenFont1 {
+        font-size: small;
+        color: white;
+        justify-self: start;
+        grid-column: 3 / span 1;
+        grid-row: 1 / span 1;
+    }
+    .litenFont2 {
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 4 / span 1;
+        grid-row: 1 / span 1;
+    }
+     .litenFont3 {
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 5 / span 1;
+        grid-row: 1 / span 1;
+    }
+    .topLeft {
+        font-size: small;
+        color: white;
+        justify-self: start;
+        grid-column: 3 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .topMiddle {
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 4 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .topRight{
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 5 / span 1;
+        grid-row: 2 / span 1;
+    }
+    .middleLeft{
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 5 / span 1;
+        grid-row: 3 / span 1;
+    }
+    .middle{
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 4 / span 1;
+        grid-row: 3 / span 1;
+    }
+    .bottomRight{
+        font-size: small;
+        color: white;
+        justify-self: center;
+        grid-column: 5 / span 1;
+        grid-row: 5 / span 1;
+    }
+    .bottomLeft{
+        font-size: small;
+        color: white;
+        justify-self: start;
+        grid-column: 3 / span 1;
+        grid-row: 5 / span 1;
+    }
+    .middleRight {
+        font-size: small;
+        color: white;
+        justify-self: start;
+        grid-column: 3 / span 1;
+        grid-row: 3 / span 1;
+    }
+}
+
+.container {}
+
+.new > .card {
+    position: relative;
+}
+
+.new > .card::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 2px;
 }
