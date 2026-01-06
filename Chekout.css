@@ -64,10 +64,23 @@ aside {
 }
 
 div {
-    display: inline-grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: row; 
+
     gap: 20px;
+    background-color: black;
+    padding-left: 1000px;
+    padding-bottom: 100px;
+    grid-column: 1 / span 5;
+    grid-row: auto / span 1;
+
+    .whatyano {
+        background-color: red;
+        color: white;
+        font-size: larger;
+        padding: 10px;
+        border-radius: 5%;
+    }
 }
 
 img {
@@ -129,22 +142,35 @@ temp {
     display: inline-grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(1, 1fr);
-    padding: 10px;
+    padding: 20px;
     
     .title {
-        padding-top: 10px;
-        justify-self: start;
+        padding-bottom: 50px;
+        justify-self: top;
     }
     
     .text {
         padding-top: 25px;
-        padding-bottom: 50px;
         justify-self: start;
     }
     
     .redButton {
-        align-self: start;
+        gap: 20px;
+        justify-self: start;
     }
+}
+
+extralarge {
+    display: inline-grid;
+    grid-template-columns: 1 / span 2;
+    grid-template-rows: 2 / span 1;
+
+    grid-column: auto / span 3;
+    grid-row: auto / span 1;
+}
+
+issue {
+    justify-self: center;
 }
 
 bottomBar {
@@ -187,108 +213,3 @@ bar {
 
     justify-self: center;
 }
-
-/* new {
-    display: inline-grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-
-    background-color: black;
-    grid-column: 1 / span 5;
-    grid-row: 6 / span 1;
-
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    padding: 50px;
-
-    align-items: stretch;
-
-    .litenFont1 {
-        font-size: small;
-        color: white;
-        justify-self: start;
-        grid-column: 3 / span 1;
-        grid-row: 1 / span 1;
-    }
-    .litenFont2 {
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 4 / span 1;
-        grid-row: 1 / span 1;
-    }
-     .litenFont3 {
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 5 / span 1;
-        grid-row: 1 / span 1;
-    }
-    .topLeft {
-        font-size: small;
-        color: white;
-        justify-self: start;
-        grid-column: 3 / span 1;
-        grid-row: 2 / span 1;
-    }
-    .topMiddle {
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 4 / span 1;
-        grid-row: 2 / span 1;
-    }
-    .topRight{
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 5 / span 1;
-        grid-row: 2 / span 1;
-    }
-    .middleLeft{
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 5 / span 1;
-        grid-row: 3 / span 1;
-    }
-    .middle{
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 4 / span 1;
-        grid-row: 3 / span 1;
-    }
-    .bottomRight{
-        font-size: small;
-        color: white;
-        justify-self: center;
-        grid-column: 5 / span 1;
-        grid-row: 5 / span 1;
-    }
-    .bottomLeft{
-        font-size: small;
-        color: white;
-        justify-self: start;
-        grid-column: 3 / span 1;
-        grid-row: 5 / span 1;
-    }
-    .middleRight {
-        font-size: small;
-        color: white;
-        justify-self: start;
-        grid-column: 3 / span 1;
-        grid-row: 3 / span 1;
-    }
-}
-
-.new > .card {
-    position: relative;
-}
-
-.new > .card::after {
-    content: "";
-    background-color: white;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-} */
