@@ -1,10 +1,12 @@
-/* * {
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-} */
+}
 
 body {
+    width: 1fr;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(auto, auto);
@@ -71,7 +73,7 @@ div {
     padding-left: 72%;
     padding-bottom: 6rem;
     grid-column: 1 / span 5;
-    grid-row: auto / span 1;
+    grid-row: auto / span 1; 
 
     .whatyano {
         background-color: red;
@@ -161,16 +163,23 @@ temp {
 }
 
 extralarge {
-    display: inline-grid;
-    grid-template-columns: 1 / span 2;
-    grid-template-rows: 2 / span 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25rem;
+    /* padding: 2rem; */
 
-    grid-column: auto / span 3;
+    grid-column: auto / span 2;
     grid-row: auto / span 1;
+    /* justify-self: center; */
+    align-items: stretch;
+    justify-items: stretch;
 }
 
-issue {
-    justify-self: center;
+extralarge img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 bottomBar {
@@ -216,13 +225,20 @@ bar {
 
 ols {
     display: inline-grid;
-    grid-template-columns: repeat(3, 100%);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     background-color: #ed363627;
+
+    
+
+    grid-column: auto / span 3;
 
     .topText {
         font-family: "Roboto";
         color: #EEEEEECC;
 
+    }
+    #topText1 {
+        justify-self: start;
     }
 }
