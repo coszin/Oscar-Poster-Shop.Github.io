@@ -7,12 +7,16 @@
 html{}
 
 body {
+    /* display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto; */
     min-height: 100vh;
     width: 100%;
     font-family: "Roboto";
     background-color: black;
     color:#e6eef6;
 }
+
 
 header { 
     display: grid;
@@ -47,9 +51,7 @@ main {
 
 .nest {
     display:grid;
-    gap:2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 8rem;
     padding-top: 5rem;
     
     /* fluid columns that respond to viewport dimensions without media queries */
@@ -138,17 +140,16 @@ main {
 }
 
 .temp {
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(1, 1fr);
-    padding-top: 5rem;
-    align-items: start;
-    justify-content: center;
+    padding: 2rem;
+    align-items: center;
+    justify-content: end;
 }
 .temp h2 {
     background-color: white;
     padding-top: 0.5rem;
-    justify-self: start;
     color: black;
     font-family: "roboto";
 }
@@ -159,17 +160,21 @@ main {
     color: black;
     padding-top: 1rem;
     padding-bottom: 2rem;
-    justify-self: start;
+}
+
+.bigButton {
+    margin: 8rem;
+    padding: 2rem;
 }
 
 .temp button {
-    padding: 2rem;
+    margin-top: 2rem;
     /* gap: 1rem; */
     border-radius: 1rem;
     color: white;
     background-color: red;
     border: none;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 #textWithBackgroundColor {
@@ -181,7 +186,6 @@ main {
     width: 100%;
     display: grid;
     justify-items: center;
-    /* align-items: center; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     
@@ -214,9 +218,13 @@ main {
 }
 
 .extraLarge {
+    display: flex;
+    padding-left: 8rem;
+    padding-right: 8rem;
+}
 
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-self: center;
+.extraLarge img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
