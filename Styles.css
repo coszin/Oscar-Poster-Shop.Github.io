@@ -1,19 +1,21 @@
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    width: 1fr;
+html{}
 
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(auto, auto);
+body {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Roboto";
+    background-color: black;
+    color:#e6eef6;
 }
 
 header { 
-    display: inline-grid;
+    display: grid;
     background-color: #4FDD80;
     grid-column: 1 / span 5;
     grid-row: 1 / span 1;
@@ -21,7 +23,7 @@ header {
 }
 
 footer {
-    display: inline-grid;
+    display: grid;
     background-color: #4FDD80;
     grid-column: auto / span 5;
     grid-row: 2 / 3;
@@ -33,7 +35,7 @@ footer {
 }
 
 main {
-    display: inline-grid;
+    display: grid;
     grid-template-rows: 11rem;
     background-color: #4FDD80;
     grid-column: 1 / span 5;
@@ -43,29 +45,42 @@ main {
     justify-content: center;
 }
 
-aside {
-    display: inline-grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+.nest {
+    display:grid;
+    gap:2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 5rem;
     
-    background-color: black;
-    padding: 6rem;
-    gap: 1.5rem;
-    
-    grid-column: 1 / span 5;
-    grid-row: 4 / span 1;
+    /* fluid columns that respond to viewport dimensions without media queries */
+    grid-template-columns: repeat(auto-fit, minmax(min(500px, 50vmax), 1fr));
+    grid-auto-rows: repeat(auto, 1fr);
+    /* align-items:stretch; */
 }
 
-div {
-    display: inline-grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    gap: 1.5rem;
+/* .nest img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+} */
+
+.layout {
+    display:flex;
+    align-items:start;
+    justify-content:center;
+    flex-direction: column;
+    overflow:hidden;
+    margin: 3rem;
+    /* default aspect for balanced cards */
+    aspect-ratio: 4/6;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
+.layout img {
+   width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
 }
 
 /* button --> */
@@ -92,57 +107,78 @@ img {
 
 /* text */
 
-#text {
-    color: white;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-}
-
 #textWithBackgroundColor {
     background-color: white;
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    padding: 1rem;
 }
 
 /* text */
 
-large {
+.large {
+    width: 100%;
     display: inline-grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 50vmax), 1fr));
+    grid-template-rows: repeat(auto, 1fr);
     
     background-color: black;
-    padding-left: 6rem;
-    padding-right: 6rem;
-    padding-bottom: 6rem;
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-bottom: 8%;
+    gap: 2rem;
     
-    grid-column: 1 / span 5;
-    grid-row: 5 / span 2;
+    grid-column: auto / span 1;
+    grid-row: auto / span 1;
 }
 
-temp {
+.large img {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    display:block;
+}
+
+.temp {
     display: inline-grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: repeat(1, 1fr);
-    padding: 0.5rem;
-    
-    .title {
-        padding-top: 0.5rem;
-        justify-self: start;
-    }
-    
-    .text {
-        padding-top: 1.5rem;
-        padding-bottom: 3rem;
-        justify-self: start;
-    }
-    
-    .redButton {
-        align-self: start;
-    }
+    padding-top: 15%;
+}
+.temp h2 {
+    background-color: white;
+    padding-top: 3%;
+    justify-self: start;
+    color: black;
+    font-family: "roboto";
 }
 
-bottomBar {
-    display: inline-grid;
-    
+.temp p {
+    background-color: white;
+    font-family: "roboto";
+    color: black;
+    padding-top: 6%;
+    padding-bottom: 10%;
+    justify-self: start;
+}
+
+.temp button {
+    padding: 5%;
+    gap: 10%;
+    border-radius: 3%;
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+#textWithBackgroundColor {
+    background-color: white;
+    padding: 10%;
+}
+
+.bottomBar {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    /* align-items: center; */
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     
@@ -152,31 +188,23 @@ bottomBar {
     grid-row: auto / span 1; 
 }
 
-.bottomBar {
-    padding: 3rem;
+.bar {
     display: flex;
     flex-direction: column;
     background-color:rgb(39, 39, 39);
     justify-content: center;
     
-    .title {
-        padding: 0.5rem;
-    }
+}
 
-    .text {
-        justify-content: center;
-    }
+.bar h2 {
+    padding: 3%;
+}
+
+.bar p {
+    font-size: 10%;
 }
 
 .bottomBarImg {
     display: flex;
     flex-direction: row;
-}
-
-bar {
-    display: inline-grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-
-    justify-self: center;
 }
